@@ -1,0 +1,170 @@
+:root {
+    --color-main: #fff;
+    --color-points: hsl(229, 25%, 31%);
+    --color-score: hsl(229, 64%, 46%);
+    --color-border: hsl(217, 16%, 45%);
+
+    --color-paper: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+    --color-rock: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+    --color-scissors: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    padding: 48px;
+}
+header{
+    border: solid 2px var(--color-border);
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    color: var(--color-main)
+}
+
+h1 span{
+    display: block;
+    line-height: 28px;
+
+}
+
+.score{
+    background: var(--color-main);
+    padding: 12px 42px;
+    border-radius: 5px;
+}
+
+.score span{
+    color: var(--color-score);
+}
+
+.points{
+    color: var(--color-points);
+    display: block;
+    font-size: 54px;
+    line-height: 48px;
+}
+
+main{
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 160px 0;
+}
+
+.options{ 
+    aspect-ratio: 320 / 280;
+    background-image: url(./images/bg-triangle.svg);
+    /* trójkąt wypełnia cały div */
+    background-size: cover;
+    margin: 0 auto; 
+    width: 50%;
+    position: relative;
+}
+
+.options .button {
+    position: absolute;
+    width: 50%;
+    cursor: pointer;
+}
+
+.button {
+    aspect-ratio: 1 / 1;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: inset 0px -8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button__imgContainer{
+    background-color: var(--color-main);
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: inset 0px 8px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button img{ 
+    width: 50%;
+}
+
+.button__paper{
+    background: linear-gradient(var(--color-paper));
+}
+
+.button__rock{
+    background: linear-gradient(var(--color-rock));
+}
+
+.button__scissors{
+    background: linear-gradient(var(--color-scissors ));
+}
+
+.options .button__paper{
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.options .button__rock{
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.options .button__scissors{
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+}
+
+.fight{
+    color: var(--color-main);
+    display: flex;
+}
+
+.fight .button{
+    width: 60%;
+}
+
+.pick {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.pick__title{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+.pick__placeholder{
+    aspect-ratio: 1/1;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
