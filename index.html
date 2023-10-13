@@ -28,34 +28,38 @@
   </header>
   <main>
     <section class="options">
-      <button class="button button__paper">
+      <button class="button button__paper" data-pick="paper">
         <div class="button__imgContainer">
           <img src="/images/icon-paper.svg" alt="Paper" />
         </div>
       </button>
-      <button class="button button__rock">
+      <button class="button button__rock" data-pick="rock">
         <div class="button__imgContainer">
           <img src="/images/icon-rock.svg" alt="Rock" /> 
         </div>
       </button>
-      <button class="button button__scissors">
+      <button class="button button__scissors" data-pick="scissors">
         <div class="button__imgContainer">
           <img src="/images/icon-scissors.svg" alt="Scissors" /> 
         </div>
       </button>
     </section>
-    <section class="fight">
+    <section class="fight hidden">
       <div class="pick">
         <span class="pick__title">YOU PICKED</span>
-        <div class="button button__paper">
-          <div class="button__imgContainer">
-            <img src="/images/icon-paper.svg" alt="Paper" />
+        <div class="pick__container pick__container--player">
+          <div class="button button__paper">
+            <div class="button__imgContainer">
+              <img src="/images/icon-paper.svg" alt="Paper" />
+            </div>
           </div>
         </div> 
       </div>
       <div class="pick">
         <span class="pick__title">THE HOUSE PICKED</span>
-        <div class="pick__placeholder"></div>
+        <div class="pick__container pick__container--house">
+          <!-- <div class="pick__placeholder"></div> -->
+        </div>  
       </div>
     </section>
   </main>

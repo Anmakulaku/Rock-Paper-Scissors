@@ -58,12 +58,23 @@ h1 span{
     display: block;
     font-size: 54px;
     line-height: 48px;
+    text-align: center;
 }
 
 main{
     margin: 0 auto;
     max-width: 600px;
+    min-height: 50vh;
     padding: 160px 0;
+    position: relative;
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .options{ 
@@ -73,7 +84,12 @@ main{
     background-size: cover;
     margin: 0 auto; 
     width: 50%;
-    position: relative;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.options.slide-left {
+    opacity: 0;
+    transform: translate(-200% , -50%);
 }
 
 .options .button {
@@ -143,7 +159,7 @@ main{
 }
 
 .fight .button{
-    width: 60%;
+    width: 100%;
 }
 
 .pick {
@@ -152,6 +168,10 @@ main{
     flex-wrap: wrap;
     align-items: flex-start;
     width: 50%;
+}
+
+.pick__container{
+    width: 60%;
 }
 
 .pick__title{
@@ -168,3 +188,6 @@ main{
     border-radius: 50%;
 }
 
+.hidden {
+    display: none;
+}
