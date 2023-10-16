@@ -21,6 +21,7 @@ body {
     min-width: 100vw;
     font-family: 'Barlow Semi Condensed', sans-serif;
     padding: 48px;
+    overflow: hidden;
 }
 header{
     border: solid 2px var(--color-border);
@@ -74,7 +75,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .options{ 
@@ -84,7 +85,6 @@ section {
     background-size: cover;
     margin: 0 auto; 
     width: 50%;
-    transition: transform 0.3s, opacity 0.3s;
 }
 
 .options.slide-left {
@@ -156,6 +156,16 @@ section {
 .fight{
     color: var(--color-main);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translate(200%, -50%);
+    width: 100%;
+}
+
+.fight.slide-left{
+    transform: translate(-50%, -50%);
+    opacity: 1;
 }
 
 .fight .button{
@@ -167,7 +177,18 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 50%;
+    width: 40%;
+    position: relative;
+    transform: translate(0, 0);
+    transition: transform 0.3s;
+}
+
+.pick__player.moved{
+    transform: translate(-25%, 0);
+}
+
+.pick__house.moved{
+    transform: translate(25%, 0);
 }
 
 .pick__container{
@@ -176,6 +197,10 @@ section {
 
 .pick__title{
     display: block;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
     text-align: center;
     width: 100%;
     padding-bottom: 24px;
@@ -190,4 +215,62 @@ section {
 
 .hidden {
     display: none;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: scaleX(0) translate(-50%, -50%);
+    transition: transform 0.3s;
+}
+.result.shown {
+    transform: scaleX(1) translate(-50%, -50%);
+}
+
+
+.result__text{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.result__button {
+    background: var(--color-main);
+    border: none;
+    color: hsl(349, 71%, 52%);
+    padding:  8px 16px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+    .score{
+        padding: 8px 12px ;
+    }
+    .fight {
+        flex-wrap: wrap;
+    }
+    
+    .pick,
+    .pick.moved{
+        position: relative;
+        left: 0;
+        right: 0;
+        transform: translate(0, 0);
+    }
+    .result {
+        margin-top: 120px; 
+        width: 100%;
+        left: 0;
+        right: 0;
+        transform: translate(0, 0) scaleX(0);
+    }
+    .result.shown {
+        transform: translate(0, 0) scaleX(1);
+    }
 }

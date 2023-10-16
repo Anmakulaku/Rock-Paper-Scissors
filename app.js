@@ -29,6 +29,7 @@ const pickEvents = () => {
     document.querySelectorAll('.options button').forEach(button => {
         button.addEventListener('click', pick);
     });
+    document.querySelector('.result__button').addEventListener('click', reset);
 };
 
 const pick = (e) => {
@@ -56,14 +57,14 @@ const pickByHouse = () => {
 };
 
 const hideOptions = () => {
-    document.querySelector('.options').classList.add('slide-left');
-    setTimeout(() => {
-        document.querySelector('.options').classList.add('hidden')
-    }, 300);
+    const optionsElement = document.querySelector('.options');
+    optionsElement.classList.add('slide-left');
 };
 
-const showFight = () => {
-    document.querySelector('.fight').classList.remove('hidden');
+const showFight = () => { 
+    const fightElement = document.querySelector('.fight');
+    fightElement .classList.add('slide-left');
+    fightElement.classList.remove('hidden');
     createElementPickedByPlayer();
     createElementPickedByHouse();
 
@@ -71,10 +72,14 @@ const showFight = () => {
 };
 
 const showResult = () => {
+    const resultText = document.querySelector('.result__text');
+
     if (state.playerPick === state.housePick) {
+        resultText.innerText = 'DRAW';
         console.log ('remis');
     }
     else if (winningCombinations[state.playerPick].includes(state.housePick)) {
+        resultText.innerText = 'YOU WIN';
         localStorage.setItem(playerWinsLSKey, state.playerWins + 1);
         state = {
             ...state,
@@ -82,6 +87,7 @@ const showResult = () => {
         };
         console.log ('player wins');
     } else {
+        resultText.innerText = 'YOU LOSE';
         localStorage.setItem(houseWinsLSKey, state.houseWins + 1);
         state = {
             ...state,
@@ -89,8 +95,15 @@ const showResult = () => {
         };
         console.log ('house wins');
     }
+    setTimeout(renderResult, 500);
+    setTimeout(renderScore, 1000);
+};
 
-    renderScore();
+const renderResult = () => {
+    document.querySelector('.result').classList.add('shown');
+    document.querySelector('.pick__player').classList.add('moved');
+    document.querySelector('.pick__house').classList.add('moved');
+    
 };
 
 const createElementPickedByPlayer = () => {
@@ -124,6 +137,19 @@ const createPickElement = (option) => {
     pickElement.appendChild(imgContainerElement);
 
     return pickElement;
+
+
+};
+
+const reset = () => {
+    const fightElement = document.querySelector('.fight');
+    fightElement.classList.remove('slide-left');
+    const optionsElement = document.querySelector('.options');
+    optionsElement.classList.remove('slide-left');
+
+    document.querySelector('.result').classList.remove('shown');
+    document.querySelector('.pick__player').classList.remove('moved');
+    document.querySelector('.pick__house').classList.remove('moved');
 };
 
 const init = () => {
