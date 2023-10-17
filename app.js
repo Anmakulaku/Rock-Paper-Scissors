@@ -1,8 +1,3 @@
-// state
-//     score
-//     player pick
-//     house pick
-
 const playerWinsLSKey = 'playerWins'; 
 const houseWinsLSKey = 'houseWins';
 
@@ -80,6 +75,7 @@ const showResult = () => {
     }
     else if (winningCombinations[state.playerPick].includes(state.housePick)) {
         resultText.innerText = 'YOU WIN';
+        document.querySelector('.circle__player').classList.remove('hidden');
         localStorage.setItem(playerWinsLSKey, state.playerWins + 1);
         state = {
             ...state,
@@ -88,11 +84,13 @@ const showResult = () => {
         console.log ('player wins');
     } else {
         resultText.innerText = 'YOU LOSE';
+        document.querySelector('.circle__house').classList.remove('hidden');
         localStorage.setItem(houseWinsLSKey, state.houseWins + 1);
         state = {
             ...state,
             houseWins: state.houseWins + 1,
         };
+    
         console.log ('house wins');
     }
     setTimeout(renderResult, 500);
@@ -103,7 +101,6 @@ const renderResult = () => {
     document.querySelector('.result').classList.add('shown');
     document.querySelector('.pick__player').classList.add('moved');
     document.querySelector('.pick__house').classList.add('moved');
-    
 };
 
 const createElementPickedByPlayer = () => {
@@ -150,11 +147,30 @@ const reset = () => {
     document.querySelector('.result').classList.remove('shown');
     document.querySelector('.pick__player').classList.remove('moved');
     document.querySelector('.pick__house').classList.remove('moved');
+    document.querySelector('.circle__player').classList.add('hidden');
+    document.querySelector('.circle__house').classList.add('hidden');
 };
+
+const rules = () => {
+    const rulesButton = document.querySelector('.rules__button');
+    const modal = document.querySelector('.modal');
+    const closeModalButton = document.querySelector('.closeModal');
+
+    rulesButton.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+    
+}
+
 
 const init = () => {
     renderScore ();
     pickEvents();
+    rules();
 };
 
 init();

@@ -47,13 +47,18 @@
     <section class="fight hidden">
       <div class="pick pick__player">
         <span class="pick__title">YOU PICKED</span>
-        <div class="pick__container pick__container--player">
-          <div class="button button__paper">
-            <div class="button__imgContainer">
-              <img src="/images/icon-paper.svg" alt="Paper" />
-            </div>
+          <div class="pick__circle circle__player hidden">
+            <div class="pick__circle pick__circle-transparent1"></div>
+            <div class="pick__circle pick__circle-transparent2"></div>
+            <div class="pick__circle pick__circle-transparent3"></div>
           </div>
-        </div> 
+            <div class="pick__container pick__container--player">
+              <div class="button button__paper">
+                <div class="button__imgContainer">
+                  <img src="/images/icon-paper.svg" alt="Paper" />
+                </div>
+              </div>
+            </div> 
       </div>
       <div class="result">
         <span class="result__text"></span>
@@ -61,14 +66,31 @@
       </div>
       <div class="pick pick__house">
         <span class="pick__title">THE HOUSE PICKED</span>
-        <div class="pick__container pick__container--house">
-          <!-- <div class="pick__placeholder"></div> -->
-        </div>  
+        <div class="pick__circle circle__house hidden">
+          <div class="pick__circle pick__circle-transparent1"></div>
+          <div class="pick__circle pick__circle-transparent2"></div>
+          <div class="pick__circle pick__circle-transparent3"></div>
+        </div>
+            <div class="pick__container pick__container--house">
+              <!-- <div class="pick__placeholder"></div> -->
+            </div>  
       </div>
     </section>
+    
+    <div class="modal hidden" id="myModal">
+      <div class="modalContent">
+        <div class="modalHeader">
+            <span class="modalMessage">RULES</span>
+            <span class="closeModal" >&#x2715;</span>
+        </div>
+            <img src="/images/image-rules.svg" alt="Rock" />
+      </div>
+    </div>
+  </div>
   </main>
-
-
+  <footer>
+    <button class="rules__button">RULES</button>
+  </footer>
   <script src="app.js"></script>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
