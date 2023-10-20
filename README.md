@@ -14,6 +14,10 @@ If you win, you gain 1 point. If the computer wins, you lose one point.
 - Rock beats Scissors
 - Scissors beats Paper
 
+# Live:
+
+https://anmakulaku.github.io/Rock-Paper-Scissors/
+
 # Tech used:
 <ul>
   <li>JavaScript</li>
