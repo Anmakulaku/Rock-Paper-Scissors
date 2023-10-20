@@ -67,7 +67,7 @@ main{
     margin: 0 auto;
     max-width: 600px;
     min-height: 50vh;
-    padding: 160px 0;
+    padding: 100px 0;
     position: relative;
 }
 
@@ -139,19 +139,19 @@ section {
 .options .button__paper{
     left: 0;
     top: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-30%, -30%);
 }
 
 .options .button__rock{
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 20%);
 }
 
 .options .button__scissors{
     right: 0;
     top: 0;
-    transform: translate(50%, -50%);
+    transform: translate(30%, -30%);
 }
 
 .fight{
@@ -228,19 +228,18 @@ section {
     width: 250px;
     height: 250px;
     border:  30px solid transparent;
-    background-color: rgba(255, 255, 255, 0.1); /* Kolor i przezroczystość */
+    background-color: rgba(255, 255, 255, 0.1); 
 }
-
 .pick__circle-transparent2 {
     width: 350px;
     height: 350px;
-    background-color: rgba(255, 255, 255, 0.08); /* Kolor i przezroczystość */
+    background-color: rgba(255, 255, 255, 0.08); 
 }
 
 .pick__circle-transparent3 {
     width: 450px;
     height: 450px;
-    background-color: rgba(255, 255, 255, 0.02); /* Kolor i przezroczystość */
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
 .pick__circle.hidden {
@@ -288,7 +287,7 @@ footer {
     width: 100%;
     max-width: 1200px;
     height: 50px;
-    margin: 100px auto;
+    margin: 20px auto;
     position: relative;
 }
 .rules__button {
@@ -308,7 +307,8 @@ footer {
 
 .modal {
     position: relative;
-    background: rgba(0, 0, 0, 0.5); /* Dodaj szare tło za pomocą rgba() */
+    top: 120px;
+    background: rgba(0, 0, 0, 0.5); 
 }
 
 .modal::before {
@@ -318,8 +318,8 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dodaj szare tło na cały ekran */
-    z-index: 1; /* Umieść to tło za modalem */
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
 }
 
 
@@ -368,15 +368,32 @@ footer {
         padding: 0;
     }
 
+    .options .button {
+        width: 70%;
+    }
+    .options .button__paper{
+        transform: translate(-50%, -50%);
+    }
+    
+    .options .button__rock{
+        transform: translate(-50%, 50%);
+    }
+    
+    .options .button__scissors{
+        transform: translate(50%, -50%);
+    }
+
     .fight {
         flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
     }
     
     .pick,
     .pick.moved{
         position: relative;
+        top: -10%;
         left: 0;
-        right: 0;
     }
     .result {
         margin: 100px auto; 
@@ -391,28 +408,36 @@ footer {
     
     .pick__container {
         position: absolute;
-        bottom: 10%;
-        width: 80%;
+        display: inline-block;
+        width: 100%;
+        transform: translate(0, -50%);
     }
 
     .pick__title{
         position: absolute;
-        top: 20px;
+        top: 100px;
+    }
+
+    .pick__circle {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .pick__circle-transparent1{
-        width: 120px;
-        height: 120px;
+        width: 160px;
+        height: 160px;
     }
     
     .pick__circle-transparent2 {
-        width: 150px;
-        height:  150px;
+        width: 200px;
+        height:  200px;
     }
     
     .pick__circle-transparent3 {
-        width: 180px;
-        height: 180px;
+        width: 240px;
+        height: 240px;
     }
 
     .result__text{
@@ -428,6 +453,10 @@ footer {
         letter-spacing: 2px;
         display: inline-block; 
         margin: 0 auto; 
+    }
+    footer {
+        margin: 100px auto;
+        position: relative;
     }
     .rules__button {
         position: absolute;
