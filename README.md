@@ -27,10 +27,10 @@ https://anmakulaku.github.io/Rock-Paper-Scissors/
 
 # Screenshots:
 
-<img width="50%" alt="mobile1" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/a1c65c92-5fae-4e8c-8f84-436a672500e1">
+<img width="50%" alt="photo1" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/715d3d88-7948-4271-a226-51cfc20b3d1d">
 
-<img width="50%" alt="mobile2" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/b96b0086-b80d-48c9-b303-fbd5551c5244">
+<img width="50%" alt="photo2" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/94a1153e-2d12-4b3d-93ed-41a1ef9cb9f6">
 
-<img width="50%" alt="desktop2" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/e0f9a198-7aa1-48fe-8019-7981296f94bb">
+<img width="50%" alt="photo3" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/2d9f90b7-3037-4b21-a51f-4ca9a69da19f">
 
-<img width="50%" alt="desktop3" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/cb83e81f-8edb-4e84-9125-83cef1a382d4">
+<img width="50%" alt="photo4" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/644c5363-c1c1-4a06-9479-36d2e8e0b545">
