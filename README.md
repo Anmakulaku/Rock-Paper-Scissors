@@ -1,3 +1,5 @@
+<img width="100%" alt="Rock-Paper-Scissors photo1" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/dd67f6d2-ee47-46b3-842b-80b855d7a497">
+
 # Rock, Paper, Scissors
 
 This is a solution to the Rock, Paper, Scissors Game from [Frontend Mentor](https://www.frontendmentor.io) challenges.
@@ -14,23 +16,23 @@ If you win, you gain 1 point. If the computer wins, you lose one point.
 - Rock beats Scissors
 - Scissors beats Paper
 
-# Live:
+# Live
 
 https://anmakulaku.github.io/Rock-Paper-Scissors/
 
-# Tech used:
+# Tech used
 <ul>
   <li>JavaScript</li>
   <li>HTML5</li>
-  <li>CSS</li>
+  <li>Vanilla CSS</li>
+  <li>SPA</li>
 </ul>
 
-# Screenshots:
+# Screenshots
 
-<img width="50%" alt="photo1" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/715d3d88-7948-4271-a226-51cfc20b3d1d">
-
-<img width="50%" alt="photo2" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/94a1153e-2d12-4b3d-93ed-41a1ef9cb9f6">
-
-<img width="50%" alt="photo3" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/2d9f90b7-3037-4b21-a51f-4ca9a69da19f">
-
-<img width="50%" alt="photo4" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/644c5363-c1c1-4a06-9479-36d2e8e0b545">
+<p align="center">
+  <img width="26%" alt="mobile1" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/8df1b388-579a-4221-ba29-9de034cfda9e">
+  <img width="22%" alt="mobile2" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/e0390626-74fd-498c-a5f1-bdf37ae75d2d">
+  <img width="50%" alt="D2" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/d5050881-08d4-44a2-a860-b8ffae65badf">
+  <img width="50%" alt="D3" src="https://github.com/Anmakulaku/Rock-Paper-Scissors/assets/119726677/7d4979ad-559e-402b-83f2-67da6ac4fa80">
+</p>
